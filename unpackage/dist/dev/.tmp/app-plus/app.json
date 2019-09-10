@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/api/api",
+    "pages/demo/demo"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "组件",
+        "color": "#888888",
+        "selectedColor": "#666666"
+      },
+      {
+        "pagePath": "pages/api/api",
+        "text": "API",
+        "color": "#888888",
+        "selectedColor": "#666666"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "demo",
+        "color": "#888888",
+        "selectedColor": "#666666"
+      }
+    ]
+  },
+  "nvueCompiler": "weex",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "uni_demo",
+  "compilerVersion": "2.2.2",
+  "usingComponents": {}
+}
