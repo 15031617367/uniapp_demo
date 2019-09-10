@@ -131,7 +131,10 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
 //
 //
 //
@@ -214,19 +217,23 @@ var _default =
   data: function data() {
     return {
       strings: '<div style="text-align:center;"><img src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"/></div>',
-      placeholder: '开始输入...' };
+      checkboxItems: [
+      {
+        name: 'USA',
+        value: '美国' },
+
+      {
+        name: 'CHN',
+        value: '中国',
+        checked: 'true' }] };
+
+
 
   },
   onLoad: function onLoad() {
 
   },
-  methods: {
-    onEditorReady: function onEditorReady() {var _this = this;
-      uni.createSelectorQuery().select('#editor').context(function (res) {
-        _this.editorCtx = res.context;
-      }).exec();
-    } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+  methods: {} };exports.default = _default;
 
 /***/ }),
 /* 20 */

@@ -61,13 +61,16 @@
 		</view>
 		
 		<view>
-			<view>富文本框</view>
-			<view>
-				<editor id="editor" :placeholder="placeholder"  @ready="onEditorReady"></editor>
-			</view>
+			<checkbox-group>
+				<label class="uni-list-cell uni-list-cell-pd" v-for="item in checkboxItems" :key="item.name">
+					<view>
+						<checkbox :value="item.name" :checked="item.checked"></checkbox>
+						{{item.value}}
+					</view>
+				</label>
+			</checkbox-group>
 		</view>
-		
-		
+				
 		
 		
 		
@@ -81,18 +84,24 @@
 		data() {
 			return {
 				strings:'<div style="text-align:center;"><img src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"/></div>',
-				placeholder: '开始输入...'
+				checkboxItems: [
+					{
+				        name: 'USA',
+				        value: '美国'
+				    },
+				    {
+						name: 'CHN',
+						value: '中国',
+						checked: 'true'
+				    }
+				],
 			}
 		},
 		onLoad() {
 			
 		},
 		methods: {
-			onEditorReady() {
-			                uni.createSelectorQuery().select('#editor').context((res) => {
-			                    this.editorCtx = res.context
-			                }).exec()
-			            },
+	
 		}
 	}
 </script>
