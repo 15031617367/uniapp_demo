@@ -4,11 +4,8 @@
     <head>
         <meta charset="UTF-8" />
         <script>
-            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
-                CSS.supports('top: constant(a)'))
-            document.write(
-                '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
-                (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')
         </script>
         <title>View</title>
         <style>
@@ -20,9 +17,11 @@
             input[type="search"i]::-webkit-search-cancel-button {
                 display: none;
             }
+
         </style>
         <script>
-            var __wxConfig = {"debug":false,"appname":"uni_demo","entryPagePath":"pages/index/index.html","page":{"pages/index/index.html":{"window":{"usingComponents":{}}},"pages/api/api.html":{"window":{"usingComponents":{}}},"pages/demo/demo.html":{"window":{"usingComponents":{}}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"uni-app","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8"}},"tabBar":{"color":"","selectedColor":"","backgroundColor":"","borderStyle":"black","list":[{"pagePath":"pages/index/index.html","text":"组件","color":"#888888","selectedColor":"#666666"},{"pagePath":"pages/api/api.html","text":"API","color":"#888888","selectedColor":"#666666"},{"pagePath":"pages/demo/demo.html","text":"demo","color":"#888888","selectedColor":"#666666"}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/index/index","pages/api/api","pages/demo/demo"],"nvueCompiler":"weex","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"2.2.2","usingComponents":{}}
+            var __wxConfig = {"debug":false,"appname":"uni_demo","entryPagePath":"pages/index/index.html","page":{"pages/index/index.html":{"window":{"usingComponents":{}}},"pages/api/api.html":{"window":{"enablePullDownRefresh":true,"usingComponents":{}}},"pages/demo/demo.html":{"window":{"usingComponents":{}}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"uni-app","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8"}},"tabBar":{"color":"","selectedColor":"","backgroundColor":"","borderStyle":"black","list":[{"pagePath":"pages/index/index.html","text":"组件","color":"#888888","selectedColor":"#666666"},{"pagePath":"pages/api/api.html","text":"API","color":"#888888","selectedColor":"#666666"},{"pagePath":"pages/demo/demo.html","text":"demo","color":"#888888","selectedColor":"#666666"}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/index/index","pages/api/api","pages/demo/demo"],"subPackages":[],"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"1.9.4","usingComponents":{}}
+
         </script>
         <script>
             var __id__ = '';
@@ -30,22 +29,9 @@
                 __id__ = page;
                 document.title = page;
                 // window.history.pushState('', '', page);
-                var wxss = page.replace('.html', '.wxss')
-                if (
-                    typeof __wxAppCode__ !== 'undefined' &&
-                    __wxAppCode__.hasOwnProperty(wxss)
-                ) {
-                    var setCssToHead = __wxAppCode__[wxss]
-                    typeof setCssToHead === 'function' && setCssToHead()
-                    document.dispatchEvent(new CustomEvent("generateFuncReady", {
-                        detail: {
-                            generateFunc: $gwx(page.replace('.html', '.wxml'))
-                        }
-                    }));
-                } else {
-                    plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
-                }
+                plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
             };
+
         </script>
         <script src="__uniappes6.js"></script>
         <script src="uniapp://ready"></script>
