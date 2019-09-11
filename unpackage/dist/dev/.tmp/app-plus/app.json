@@ -4,6 +4,7 @@
     "pages/api/api",
     "pages/demo/demo"
   ],
+  "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
@@ -32,13 +33,11 @@
       }
     ]
   },
-  "nvueCompiler": "weex",
-  "renderer": "auto",
   "splashscreen": {
     "alwaysShowBeforeRender": true,
     "autoclose": false
   },
   "appname": "uni_demo",
-  "compilerVersion": "2.2.2",
+  "compilerVersion": "1.9.4",
   "usingComponents": {}
 }
