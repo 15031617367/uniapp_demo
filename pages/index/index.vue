@@ -69,7 +69,7 @@
 					</view>
 				</label>
 			</checkbox-group>
-		</view>
+		</view> 
 				
 		
 		
